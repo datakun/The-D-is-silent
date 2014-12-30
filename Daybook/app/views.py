@@ -1,10 +1,10 @@
 # coding=utf-8
 from datetime import datetime
+
 from django.contrib.auth import authenticate, logout
 from django.contrib.auth.models import User
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
-import pytz
 
 from app.models import Daybooks
 
