@@ -1,0 +1,51 @@
+/* CSS Tree menu styles */
+li.expandable-tree {
+    position: relative;
+    list-style: none;
+}
+
+li.expandable-tree input {
+    position: absolute;
+    left: 0;
+    margin-left: 0;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+    height: 1em;
+    width: 1em;
+    top: 0;
+}
+
+li.expandable-tree input + ol {
+    padding-left: 15px;
+    height: 1em;
+}
+
+li.expandable-tree input + ol > li {
+    display: none;
+    padding-left: 1px;
+}
+
+li.expandable-tree label {
+    cursor: pointer;
+    display: block;
+}
+
+li.expandable-tree input:checked + ol {
+    height: auto;
+}
+
+li.expandable-tree input:checked + ol > li {
+    display: block;
+    margin: 0 0 0.125em; /* 2px */
+}
+
+li.expandable-tree input:checked + ol > li:last-child {
+    margin: 0 0 0.063em; /* 1px */
+}
+
+.nav li div {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
